@@ -1,0 +1,23 @@
+.background {
+    background-size: 10%;
+    border-radius: 5rem;
+    display: flex;
+    background-image: url("../../../../public/pngs/dot-background.png");
+    background-size: cover;
+    -webkit-mask-image: radial-gradient(
+        circle at center,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 0) 70%
+    );
+    mask-image: radial-gradient(
+        circle at center,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 0) 70%
+    );
+    width: 100%;
+    height: 80rem;
+    position: absolute;
+    left: 50%;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+}
