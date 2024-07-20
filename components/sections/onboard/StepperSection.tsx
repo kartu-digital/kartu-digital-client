@@ -2,7 +2,7 @@
 
 "use client";
 
-import React, { useMemo, useState } from "react";
+import React, { useMemo, useState, useCallback } from "react";
 
 import Stepper from "@/components/ui/steppers/stepper";
 import { Stepone } from "./Step1";
@@ -12,13 +12,12 @@ import { Stepfour } from "./Step4";
 
 export default function StepperSection() {
     const [activeStep, setActiveStep] = useState(1);
-
-    const changeActiveStep = (stepValue: number) => {
-        if (stepValue <= steps.length || stepValue >= 1) {
+    const changeActiveStep = useCallback((stepValue: number) => {
+        if (stepValue >= 1 && stepValue <= 4) {
+            // Sesuaikan batas atas sesuai dengan jumlah langkah
             setActiveStep(stepValue);
         }
-    };
-
+    }, []);
     const steps = useMemo(
         () => [
             {
@@ -42,7 +41,7 @@ export default function StepperSection() {
                 component: <Stepfour />,
             },
         ],
-        [],
+        [changeActiveStep],
     );
 
     const activeComponent = useMemo(() => {

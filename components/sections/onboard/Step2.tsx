@@ -1,6 +1,6 @@
 // prajna ==============================================================================================
 import { Button } from "@/components/ui/button";
-import React, { useState } from "react";
+import React, { useState, MouseEvent } from "react";
 import {
     Carousel,
     CarouselContent,
@@ -23,10 +23,11 @@ export const Steptwo: React.FC<IStepProps> = ({ changeActiveStep }) => {
         templateId: "",
     });
 
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
         changeActiveStep(3);
     };
+
     return (
         <div>
             <div className="flex-col justify-center ">

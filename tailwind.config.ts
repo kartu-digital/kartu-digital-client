@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import { PluginAPI } from "tailwindcss/types/config";
 
 const config = {
     darkMode: ["class"],
@@ -123,7 +124,7 @@ const config = {
     plugins: [
         require("tailwindcss-animate"),
         //prajna ==============================
-        function ({ addUtilities }) {
+        function ({ addUtilities }: PluginAPI) {
             addUtilities({
                 ".scrollbar-hide": {
                     "&::-webkit-scrollbar": {
