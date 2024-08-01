@@ -19,6 +19,7 @@ export const AuthProvider: FC<{ children: ReactNode }> = ({ children }) => {
         role: string;
         membership: string;
     } | null>(null);
+
     const router = useRouter();
 
     const login = async (email: string, password: string) => {
@@ -34,7 +35,6 @@ export const AuthProvider: FC<{ children: ReactNode }> = ({ children }) => {
             console.log("Login successful", response.data);
             await fetchUserProfile();
         } catch (error) {
-            // Handle errors
             if (axios.isAxiosError(error)) {
                 console.error(
                     "Login failed:",
@@ -44,7 +44,7 @@ export const AuthProvider: FC<{ children: ReactNode }> = ({ children }) => {
                 console.error("An unexpected error occurred:", error);
             }
         }
-        router.push("/");
+        router.push("/dashboard");
     };
 
     const fetchUserProfile = async () => {
@@ -66,7 +66,7 @@ export const AuthProvider: FC<{ children: ReactNode }> = ({ children }) => {
                 { withCredentials: true },
             );
             setUser(null);
-            // router.push("/login");
+            router.push("/login");
         } catch (error) {
             console.error("Logout failed", error);
         }
