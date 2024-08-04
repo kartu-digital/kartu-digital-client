@@ -53,7 +53,6 @@ export const AuthProvider: FC<{ children: ReactNode }> = ({ children }) => {
         const response = await axios.get("http://localhost:8080/auth/profile", {
             withCredentials: true,
         });
-        // console.log(``);
         console.log(response.data);
         setUser(response.data);
     };
