@@ -5,12 +5,23 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 
 interface AuthContextProps {
-    user: { email: string } | null;
+    status: "authenticated" | "loading" | "unauthenticated";
+    user: {
+        email: string;
+        username: string;
+        membership: string;
+        role: string;
+    } | null;
     login: (email: string, password: string) => Promise<void>;
     logout: () => Promise<void>;
 }
 
-const AuthContext = createContext<AuthContextProps | undefined>(undefined);
+const AuthContext = createContext<AuthContextProps>({
+    status: "loading",
+    user: null,
+    login: async () => {},
+    logout: async () => {},
+});
 
 export const AuthProvider: FC<{ children: ReactNode }> = ({ children }) => {
     const [user, setUser] = useState<{
@@ -20,11 +31,15 @@ export const AuthProvider: FC<{ children: ReactNode }> = ({ children }) => {
         membership: string;
     } | null>(null);
 
+    const [status, setStatus] = useState<
+        "authenticated" | "loading" | "unauthenticated"
+    >("loading");
+
     const router = useRouter();
 
     const login = async (email: string, password: string) => {
         try {
-            const response = await axios.post(
+            await axios.post(
                 "http://localhost:8080/auth/login",
                 { email, password },
                 {
@@ -32,8 +47,14 @@ export const AuthProvider: FC<{ children: ReactNode }> = ({ children }) => {
                 },
             );
 
-            console.log("Login successful", response.data);
-            await fetchUserProfile();
+            const response = await axios.get(
+                "http://localhost:8080/auth/profile",
+                {
+                    withCredentials: true,
+                },
+            );
+            console.log(response.data);
+            setUser(response.data);
         } catch (error) {
             if (axios.isAxiosError(error)) {
                 console.error(
@@ -45,16 +66,6 @@ export const AuthProvider: FC<{ children: ReactNode }> = ({ children }) => {
             }
         }
         router.push("/dashboard");
-    };
-
-    const fetchUserProfile = async () => {
-        console.log("masuk fetch profile");
-
-        const response = await axios.get("http://localhost:8080/auth/profile", {
-            withCredentials: true,
-        });
-        console.log(response.data);
-        setUser(response.data);
     };
 
     const logout = async () => {
@@ -74,7 +85,15 @@ export const AuthProvider: FC<{ children: ReactNode }> = ({ children }) => {
     useEffect(() => {
         (async () => {
             try {
-                await fetchUserProfile();
+                const response = await axios.get(
+                    "http://localhost:8080/auth/profile",
+                    {
+                        withCredentials: true,
+                    },
+                );
+                console.log(response.data);
+                setUser(response.data);
+                setStatus("authenticated");
             } catch (err) {
                 if (axios.isAxiosError(err)) {
                     if (err.status === 401) {
@@ -83,18 +102,30 @@ export const AuthProvider: FC<{ children: ReactNode }> = ({ children }) => {
                                 "http://localhost:8080/auth/refresh",
                             );
 
-                            await fetchUserProfile();
+                            const response = await axios.get(
+                                "http://localhost:8080/auth/profile",
+                                {
+                                    withCredentials: true,
+                                },
+                            );
+                            console.log(response.data);
+                            setUser(response.data);
+                            setStatus("authenticated");
                         } catch (err) {
+                            setUser(null);
+                            setStatus("unauthenticated");
                             return err;
                         }
                     }
                 }
+                setUser(null);
+                setStatus("unauthenticated");
             }
         })();
     }, []);
 
     return (
-        <AuthContext.Provider value={{ user, login, logout }}>
+        <AuthContext.Provider value={{ status, user, login, logout }}>
             {children}
         </AuthContext.Provider>
     );

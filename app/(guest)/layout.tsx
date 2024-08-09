@@ -1,5 +1,5 @@
 "use client";
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 import Navigation from "@/components/sections/navbar-footer/Navigation";
 import Footer from "@/components/sections/navbar-footer/Footer";
 import useAuth from "@/hooks/useAuth";
@@ -12,9 +12,11 @@ export default function GuestLayout({
 }) {
     const auth = useAuth();
     const router = useRouter();
-    if (auth?.user) {
-        router.push("/dashboard");
-    }
+    useEffect(() => {
+        if (auth.user) {
+            router.push("/dashboard");
+        }
+    }, [auth, router]);
     return (
         <Fragment>
             <Navigation />
