@@ -4,21 +4,16 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { useState, FormEvent, ChangeEvent, useContext } from "react";
-import AuthContext from "@/context/AuthContext";
+import useAuth from "@/hooks/useAuth";
 
 import { Button } from "@/components/ui/button";
 
 export default function Login() {
-    const authContext = useContext(AuthContext);
     const [form, setForm] = useState({ email: "", password: "" });
     const [check, setCheck] = useState(true);
     const [eye, setEye] = useState(false);
 
-    if (!authContext) {
-        throw new Error("Auth Context must be use within an Auth Provider");
-    }
-
-    const { login } = authContext;
+    const auth = useAuth();
 
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
@@ -32,7 +27,7 @@ export default function Login() {
     const submitForm = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         console.log(form);
-        await login(form.email, form.password);
+        await auth.login(form.email, form.password);
     };
 
     return (
