@@ -61,15 +61,15 @@ export default function Register() {
                 >
                     <Image
                         className="sm:hidden"
-                        src="/pngs/logo.png"
-                        alt="Logo"
+                        src="/svgs/logo.svg"
+                        alt="kartu digital"
                         width={30}
                         height={20}
                     />
                     <Image
                         className="hidden sm:block"
-                        src="/pngs/logo.png"
-                        alt="Logo"
+                        src="/svgs/logo.svg"
+                        alt="kartu digital"
                         width={50}
                         height={30}
                     />

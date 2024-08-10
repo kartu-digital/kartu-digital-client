@@ -39,15 +39,15 @@ export default function Login() {
                 >
                     <Image
                         className="sm:hidden"
-                        src="/pngs/logo.png"
-                        alt="Logo"
+                        src="/svgs/logo.svg"
+                        alt="Kartu Digital"
                         width={30}
                         height={20}
                     />
                     <Image
                         className="hidden sm:block"
-                        src="/pngs/logo.png"
-                        alt="Logo"
+                        src="/svgs/logo.svg"
+                        alt="Kartu Digital"
                         width={50}
                         height={30}
                     />
