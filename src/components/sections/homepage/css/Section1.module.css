@@ -2,7 +2,7 @@
     background-size: 10%;
     border-radius: 5rem;
     display: flex;
-    background-image: url("../../../../public/pngs/dot-background.png");
+    background-image: url("../../../../../public/pngs/dot-background.png");
     background-size: cover;
     -webkit-mask-image: radial-gradient(
         circle at center,
