@@ -1,8 +1,7 @@
 // prajna ==============================================================================================
-
 "use client";
 
-import React, { useMemo, useState, useCallback } from "react";
+import { useMemo, useState, useCallback } from "react";
 
 import Stepper from "@/components/ui/steppers/stepper";
 import { Stepone } from "./Step1";
