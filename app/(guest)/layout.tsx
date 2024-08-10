@@ -1,7 +1,7 @@
 "use client";
 import React, { Fragment, useEffect } from "react";
-import Navigation from "@/components/sections/navbar-footer/Navigation";
-import Footer from "@/components/sections/navbar-footer/Footer";
+import Navigation from "@/components/sections/navbar-footer/navigation";
+import Footer from "@/components/sections/navbar-footer/footer";
 import useAuth from "@/hooks/useAuth";
 import { useRouter } from "next/navigation";
 
