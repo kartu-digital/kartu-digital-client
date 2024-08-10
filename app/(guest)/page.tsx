@@ -1,14 +1,4 @@
 //tio====================================================
-
-//side note
-//margin x lg = 64
-//margin x = 4;
-//padding x = 4;
-//padding x lg = 64
-//text size lg =
-//desc size lg =
-//text size =
-//desc size =
 "use client";
 import React from "react";
 
@@ -21,16 +11,16 @@ import Section5 from "@/components/sections/homepage/Section5";
 import Section6 from "@/components/sections/homepage/Section6";
 
 export default function Home() {
-  return (
-    <React.Fragment>
-      <Section1 />
-      <Section2 />
-      <Section3 />
-      <Section4 />
-      <Section5 />
-      <Section6 />
-    </React.Fragment>
-  );
+    return (
+        <React.Fragment>
+            <Section1 />
+            <Section2 />
+            <Section3 />
+            <Section4 />
+            <Section5 />
+            <Section6 />
+        </React.Fragment>
+    );
 }
 
 //======================================================================

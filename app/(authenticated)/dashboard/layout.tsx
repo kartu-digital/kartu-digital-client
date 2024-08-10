@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import useAuth from "@/hooks/useAuth";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -21,6 +22,7 @@ export default function Layout() {
     const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
     const [showChildren, setShowChildren] = useState(false);
 
+    const auth = useAuth();
     const handleClick = () => {
         setIsHamburgerOpen(!isHamburgerOpen);
     };
@@ -149,6 +151,7 @@ export default function Layout() {
                                         <NavigationMenuLink asChild>
                                             <Link
                                                 href={"/"}
+                                                onClick={auth.logout}
                                                 className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b px-3 py-2 text-red-500 transition-all duration-300 hover:bg-slate-100"
                                             >
                                                 Sign Out
