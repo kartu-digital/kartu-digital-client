@@ -23,12 +23,16 @@ import {
     AccordionTrigger,
 } from "@/components/ui/accordion";
 const workSans = Work_Sans({ subsets: ["latin"], weight: "600" });
-export default function Navigation() {
-    const [isOpen, setIsOpen] = useState(false);
-    const handleClick = () => {
-        setIsOpen(!isOpen);
-    };
 
+interface NavigationProps {
+    setIsOpen: (value: boolean) => void;
+    isOpen: boolean;
+}
+
+export default function Navigation({
+    setIsOpen,
+    isOpen,
+}: Readonly<NavigationProps>) {
     return (
         <nav className="relative z-50 mb-5 flex w-full justify-between lg:px-10 lg:py-8">
             {/* mobile nav start */}
@@ -58,30 +62,30 @@ export default function Navigation() {
                             Get Started
                         </Link>
                         <button
-                            onClick={handleClick}
+                            onClick={() => setIsOpen(!isOpen)}
                             className="flex flex-col items-center justify-center gap-1"
                         >
                             <span
                                 className={`block h-0.5 w-6 rounded-sm bg-black 
-                   transition-all duration-300 ease-out ${
-                       isOpen
-                           ? "translate-y-[0.360rem] rotate-45"
-                           : "-translate-y-0.5"
-                   }`}
+                transition-all duration-300 ease-out ${
+                    isOpen
+                        ? "translate-y-[0.360rem] rotate-45"
+                        : "-translate-y-0.5"
+                }`}
                             ></span>
                             <span
                                 className={`block h-0.5 w-6 rounded-sm bg-black 
-                   transition-all duration-300 ease-out ${
-                       isOpen ? "opacity-0" : "opacity-100"
-                   }`}
+                transition-all duration-300 ease-out ${
+                    isOpen ? "opacity-0" : "opacity-100"
+                }`}
                             ></span>
                             <span
                                 className={`block h-0.5 w-6 rounded-sm bg-black 
-                   transition-all duration-300 ease-out ${
-                       isOpen
-                           ? "-translate-y-[0.360rem] -rotate-45"
-                           : "translate-y-0.5"
-                   }`}
+                    transition-all duration-300 ease-out ${
+                        isOpen
+                            ? "-translate-y-[0.360rem] -rotate-45"
+                            : "translate-y-0.5"
+                    }`}
                             ></span>
                         </button>
                     </div>
