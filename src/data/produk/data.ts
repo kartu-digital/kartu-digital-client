@@ -1,5 +1,4 @@
-// lib/sample-data.ts
-export interface Product {
+export interface ProductProps {
     name: string;
     type: string;
     colors: string[];
@@ -8,7 +7,7 @@ export interface Product {
     link: string;
 }
 
-const sampleData: { product: Product[] } = {
+export const productData: { product: ProductProps[] } = {
     product: [
         {
             name: "Wave",
@@ -95,5 +94,3 @@ const sampleData: { product: Product[] } = {
         },
     ],
 };
-
-export default sampleData;
