@@ -68,7 +68,7 @@ export default function Register() {
                     />
                     <Image
                         className="hidden sm:block"
-                        src="/svgs/logo.svg"
+                        src="/svgs/logo-color.svg"
                         alt="kartu digital"
                         width={50}
                         height={30}
@@ -120,8 +120,8 @@ export default function Register() {
                             <Image
                                 src={
                                     eye
-                                        ? "/svgs/passwordEyeOpen.svg"
-                                        : "/svgs/passwordEyeClosed.svg"
+                                        ? "/svgs/password-eye-closed.svg"
+                                        : "/svgs/password-eye-open.svg"
                                 }
                                 alt="eye"
                                 width={20}
@@ -193,7 +193,7 @@ export default function Register() {
             </div>
             <div className="hidden min-h-screen w-7/12 items-center justify-center lg:flex">
                 <Image
-                    src="/pngs/RegisterSplashArt.png"
+                    src="/webp/register-splash-art.webp"
                     alt="Register Splash Art"
                     width={700}
                     height={0}
