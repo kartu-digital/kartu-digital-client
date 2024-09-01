@@ -22,25 +22,25 @@ interface featureProps {
 
 export const features: featureProps[] = [
     {
-        img: "/svgs/feature1.svg",
+        img: "/svgs/feature-1.svg",
         title: "Beragam Pilihan Template untuk Dipilih",
         description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pharetra arcu ut elit luctus, sed suscipit nisl iaculis. Mauris eget lectus lobortis, mollis diam eget.",
     },
     {
-        img: "/svgs/feature2.svg",
+        img: "/svgs/feature-2.svg",
         title: "Alat Desain yang Intuitif dan Ramah Pengguna",
         description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pharetra arcu ut elit luctus, sed suscipit nisl iaculis. Mauris eget lectus lobortis, mollis diam eget.",
     },
     {
-        img: "/svgs/feature3.svg",
+        img: "/svgs/feature-3.svg",
         title: "Mudah untuk Membagikan Kartu Anda",
         description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pharetra arcu ut elit luctus, sed suscipit nisl iaculis. Mauris eget lectus lobortis, mollis diam eget.",
     },
     {
-        img: "/svgs/feature4.svg",
+        img: "/svgs/feature-4.svg",
         title: "Buat Kartu Hanya dalam Beberapa Menit",
         description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pharetra arcu ut elit luctus, sed suscipit nisl iaculis. Mauris eget lectus lobortis, mollis diam eget.",

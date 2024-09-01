@@ -39,14 +39,14 @@ export default function Login() {
                 >
                     <Image
                         className="sm:hidden"
-                        src="/svgs/logo.svg"
+                        src="/svgs/logo-color.svg"
                         alt="Kartu Digital"
                         width={30}
                         height={20}
                     />
                     <Image
                         className="hidden sm:block"
-                        src="/svgs/logo.svg"
+                        src="/svgs/logo-color.svg"
                         alt="Kartu Digital"
                         width={50}
                         height={30}
@@ -87,8 +87,8 @@ export default function Login() {
                             <Image
                                 src={
                                     eye
-                                        ? "/svgs/passwordEyeOpen.svg"
-                                        : "/svgs/passwordEyeClosed.svg"
+                                        ? "/svgs/password-eye-closed.svg"
+                                        : "/svgs/password-eye-open.svg"
                                 }
                                 alt="eye"
                                 width={20}
@@ -147,7 +147,7 @@ export default function Login() {
             </div>
             <div className="hidden min-h-screen w-7/12 items-center justify-center lg:flex">
                 <Image
-                    src="/pngs/LoginSplashArt.png"
+                    src="/webp/login-splash-art.webp"
                     alt="Login Splash Art"
                     width={700}
                     height={0}

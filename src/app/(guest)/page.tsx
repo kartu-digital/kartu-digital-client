@@ -26,7 +26,7 @@ export default function Index() {
         backgroundSize: "cover",
         borderRadius: "5rem",
         display: "flex",
-        backgroundImage: 'url("/pngs/dot-background.png")',
+        backgroundImage: 'url("/webp/dot-background.webp")',
         WebkitMaskImage:
             "radial-gradient(circle at center, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 70%)",
         maskImage:
@@ -73,14 +73,14 @@ export default function Index() {
             <div className="mt-20 flex w-full justify-around">
                 <div className="hidden flex-col justify-around lg:flex lg:justify-between">
                     <Image
-                        src="/pngs/pencil.png"
+                        src="/webp/pencil.webp"
                         alt="Pencil"
                         className="w-44"
                         width={100}
                         height={100}
                     />
                     <Image
-                        src="/pngs/brush.png"
+                        src="/webp/brush.webp"
                         alt="Brush"
                         className="w-44"
                         width={100}
@@ -112,14 +112,14 @@ export default function Index() {
                 </div>
                 <div className="hidden flex-col justify-around lg:flex lg:justify-between">
                     <Image
-                        src="/pngs/pictures.png"
+                        src="/webp/pictures.webp"
                         alt="ImagePicture"
                         className="w-44"
                         width={100}
                         height={100}
                     />
                     <Image
-                        src="/pngs/pentool.png"
+                        src="/webp/pentool.webp"
                         alt="Pentool"
                         className="w-44"
                         width={100}
@@ -194,8 +194,8 @@ export default function Index() {
                             alt="make envelope"
                             src="/svgs/make-envelope.svg"
                             className=""
-                            width={100}
-                            height={100}
+                            width={500}
+                            height={500}
                         />
                     </div>
                 </div>
@@ -207,8 +207,8 @@ export default function Index() {
                             alt="make envelope"
                             src="/svgs/edit-card.svg"
                             className=""
-                            width={100}
-                            height={100}
+                            width={500}
+                            height={500}
                         />
                     </div>
                     <div className="flex h-fit w-full flex-col justify-center lg:w-1/2">
@@ -302,8 +302,8 @@ export default function Index() {
                         alt="make envelope"
                         src="/svgs/how-to-make-your-card.svg"
                         className="md:w-1/2"
-                        width={100}
-                        height={100}
+                        width={500}
+                        height={500}
                     />
                 </div>
             </div>
