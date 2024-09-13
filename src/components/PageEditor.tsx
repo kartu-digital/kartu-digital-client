@@ -1,4 +1,4 @@
-import Draggable from "./Draggable";
+import Draggable from './Draggable';
 
 //start {Page editor (russel)}
 export default function PageEditor() {
@@ -6,20 +6,20 @@ export default function PageEditor() {
     <>
       <div
         style={{
-          boxShadow: "0px 5px 50px -25px #00000040",
+          boxShadow: '0px 5px 50px -25px #00000040',
         }}
-        className="absolute top-[244px] left-[40px] bg-Neutral300 w-[310px] max-h-[322px] pb-[24px] border-[2px] border-Neutral500 rounded-[15px] px-[20px]"
+        className="absolute left-[40px] top-[244px] max-h-[322px] w-[310px] rounded-[15px] border-[2px] border-Neutral500 bg-Neutral300 px-[20px] pb-[24px]"
       >
-        <div className="w-full h-[68px] flex items-center">
+        <div className="flex h-[68px] w-full items-center">
           <p className="text-[16px] font-bold">Halaman</p>
         </div>
-        <div className="flex flex-col gap-5 max-h-[250px] overflow-scroll">
-            <Draggable parameter="Cover Depan"/>
-            <Draggable parameter="Halaman 2"/>
-            <Draggable parameter="Halaman 3"/>
-            <Draggable parameter="Halaman 4"/>
-            <Draggable parameter="Halaman 5"/>
-            <Draggable parameter="Halaman 6"/>
+        <div className="flex max-h-[250px] flex-col gap-5 overflow-scroll">
+          <Draggable parameter="Cover Depan" />
+          <Draggable parameter="Halaman 2" />
+          <Draggable parameter="Halaman 3" />
+          <Draggable parameter="Halaman 4" />
+          <Draggable parameter="Halaman 5" />
+          <Draggable parameter="Halaman 6" />
         </div>
       </div>
     </>
