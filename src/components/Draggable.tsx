@@ -1,5 +1,4 @@
-import Image from "next/image";
-import Ellypsis from "@/public/svgs/ellypsis-vertical.svg";
+import Image from 'next/image';
 import PencilIcon from '@gravity-ui/icons/svgs/pencil.svg';
 
 interface Text {
@@ -9,15 +8,15 @@ interface Text {
 const Draggable: React.FC<Text> = ({ parameter }) => {
   return (
     <>
-      <div className="bg-Neutral400 w-[261px] min-h-[52px] rounded-[15px] flex items-center px-3">
+      <div className="flex min-h-[52px] w-[261px] items-center rounded-[15px] bg-Neutral400 px-3">
         <Image
-          className="w-[28px] cursor-pointer mr-3"
+          className="mr-3 w-[28px] cursor-pointer"
           alt="Ellypsis"
           src="/svgs/ellypsis-vertical.svg"
         />
         <p>{parameter}</p>
         <Image
-          className="w-[20px] cursor-pointer ml-auto"
+          className="ml-auto w-[20px] cursor-pointer"
           alt="Edit"
           src={PencilIcon}
         />
