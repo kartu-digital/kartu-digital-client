@@ -9,7 +9,7 @@ import Link from "next/link";
 
 const workSans = Work_Sans({ subsets: ["latin"], weight: "600" });
 
-//prajna=======================================================================================
+//{Onboard Page Start (Prajna)}
 export default function OnBoard() {
     return (
         <>
@@ -42,3 +42,4 @@ export default function OnBoard() {
         </>
     );
 }
+// {Onboard Page End}

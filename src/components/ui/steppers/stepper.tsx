@@ -1,4 +1,4 @@
-// prajna ==============================================================================================
+// {Stepper Component Start (Prajna)}
 
 import React from "react";
 import styles from "@/components/ui/steppers/css/Stepper.module.css";
@@ -43,4 +43,4 @@ const Stepper: React.FC<StepperProps> = ({
 
 export default Stepper;
 
-//  ==============================================================================================
+// {Stepper Component End}

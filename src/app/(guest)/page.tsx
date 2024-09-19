@@ -78,6 +78,7 @@ export default function Index() {
                         className="w-44"
                         width={100}
                         height={100}
+                        quality={100}
                     />
                     <Image
                         src="/webp/brush.webp"
@@ -85,6 +86,7 @@ export default function Index() {
                         className="w-44"
                         width={100}
                         height={100}
+                        quality={100}
                     />
                 </div>
                 <div className="flex flex-col items-center lg:my-20">
@@ -117,6 +119,7 @@ export default function Index() {
                         className="w-44"
                         width={100}
                         height={100}
+                        quality={100}
                     />
                     <Image
                         src="/webp/pentool.webp"
@@ -124,6 +127,7 @@ export default function Index() {
                         className="w-44"
                         width={100}
                         height={100}
+                        quality={100}
                     />
                 </div>
             </div>
