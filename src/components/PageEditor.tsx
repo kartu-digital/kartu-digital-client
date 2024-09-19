@@ -8,7 +8,7 @@ export default function PageEditor() {
         style={{
           boxShadow: "0px 5px 50px -25px #00000040",
         }}
-        className="absolute top-[244px] left-[40px] bg-Neutral300 w-[310px] max-h-[322px] pb-[24px] border-[2px] border-Neutral500 rounded-[15px] px-[20px]"
+        className="absolute top-[244px] left-[40px] bg-Neutral300  w-[310px] max-h-[322px] pb-[24px] border-[2px] border-Neutral500 rounded-[15px] px-[20px]"
       >
         <div className="w-full h-[68px] flex items-center">
           <p className="text-[16px] font-bold">Halaman</p>

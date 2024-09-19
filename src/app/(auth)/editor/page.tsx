@@ -27,6 +27,8 @@ export default function Editor() {
         <Image
           className="w-[20px] ml-auto cursor-pointer"
           alt="Edit"
+          width={100}
+          height={100}
           src={PencilIcon}
         />
       </div>
