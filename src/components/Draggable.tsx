@@ -13,7 +13,7 @@ const Draggable: React.FC<Text> = ({ parameter }) => {
         <Image
           className="w-[28px] cursor-pointer mr-3"
           alt="Ellypsis"
-          src={Ellypsis}
+          src="/svgs/ellypsis-vertical.svg"
         />
         <p>{parameter}</p>
         <Image
