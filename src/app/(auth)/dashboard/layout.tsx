@@ -36,7 +36,7 @@ export default function Layout() {
             <div className="min-w-16">
               <Button variant="ghost" onClick={handleClick}>
                 <Image
-                  src="/svgs/hamburgerMenu.svg"
+                  src="/svgs/hamburger-menu.svg"
                   alt="hamburger"
                   width={20}
                   height={0}
@@ -44,7 +44,12 @@ export default function Layout() {
               </Button>
             </div>
             <div className="flex items-center space-x-4">
-              <Image src="/pngs/logo.png" alt="Logo" width={50} height={0} />
+              <Image
+                src="/svgs/logo-color.svg"
+                alt="Logo"
+                width={50}
+                height={0}
+              />
               <h1 className="text-xl font-semibold sm:text-2xl">
                 Kartu Digital
               </h1>
@@ -75,7 +80,7 @@ export default function Layout() {
             <NavigationMenuItem className="list-none">
               <NavigationMenuTrigger>
                 <Image
-                  src="/svgs/notificationBell.svg"
+                  src="/svgs/notification-bell.svg"
                   alt=""
                   width={20}
                   height={0}
@@ -162,14 +167,14 @@ export default function Layout() {
           className={`absolute left-0 flex h-screen w-1/5 min-w-72 flex-col space-y-2 border border-r p-6 px-10 transition-all duration-300 ease-in-out ${isHamburgerOpen ? '' : 'left-[-50%]'}`}
         >
           <div className="flex cursor-pointer items-center space-x-4 rounded-2xl px-4 py-2 hover:bg-Neutral400">
-            <Image src="/svgs/homeIcon.svg" alt="" width={30} height={0} />
+            <Image src="/svgs/home-icon.svg" alt="" width={30} height={0} />
             <h1>Beranda</h1>
           </div>
           <div
             className={`flex cursor-pointer items-center space-x-4 rounded-2xl px-4 py-2 hover:bg-Neutral400 ${showChildren ? 'bg-Neutral400' : 'bg-white'}`}
             onClick={() => setShowChildren(!showChildren)}
           >
-            <Image src="/svgs/situsIcon.svg" alt="" width={30} height={0} />
+            <Image src="/svgs/situs-icon.svg" alt="" width={30} height={0} />
             <h1>Situs</h1>
           </div>
           {showChildren && (
@@ -183,11 +188,16 @@ export default function Layout() {
             </>
           )}
           <div className="flex cursor-pointer items-center space-x-4 rounded-2xl px-4 py-2 hover:bg-Neutral400">
-            <Image src="/svgs/templatesIcon.svg" alt="" width={30} height={0} />
+            <Image
+              src="/svgs/templates-icon.svg"
+              alt=""
+              width={30}
+              height={0}
+            />
             <h1>Templates</h1>
           </div>
           <div className="flex cursor-pointer items-center space-x-4 rounded-2xl px-4 py-2 hover:bg-Neutral400">
-            <Image src="/svgs/paketIcon.svg" alt="" width={30} height={0} />
+            <Image src="/svgs/paket-icon.svg" alt="" width={30} height={0} />
             <h1>Paket Anda</h1>
           </div>
         </div>
@@ -198,14 +208,19 @@ export default function Layout() {
         <nav className="item-center flex w-screen justify-between border border-r p-6">
           <div className="flex w-full items-center justify-between">
             <div className="flex items-center space-x-4">
-              <Image src="/pngs/logo.png" alt="Logo" width={50} height={0} />
+              <Image
+                src="/svgs/logo-color.svg"
+                alt="Logo"
+                width={50}
+                height={0}
+              />
               <h1 className="text-xl font-semibold sm:text-2xl">
                 Kartu Digital
               </h1>
             </div>
             <Button variant="ghost" onClick={handleClick}>
               <Image
-                src="/svgs/hamburgerMenu.svg"
+                src="/svgs/hamburger-menu.svg"
                 alt="hamburger"
                 width={20}
                 height={0}
@@ -218,7 +233,7 @@ export default function Layout() {
         >
           <div className="mx-4 flex h-12 items-center">
             <Image
-              src="/svgs/searchIcon.svg"
+              src="/svgs/search-icon.svg"
               alt="search icon"
               width={30}
               height={0}
@@ -233,14 +248,14 @@ export default function Layout() {
             />
           </div>
           <div className="flex cursor-pointer items-center space-x-4 rounded-2xl px-4 py-2 hover:bg-Neutral400">
-            <Image src="/svgs/homeIcon.svg" alt="" width={30} height={0} />
+            <Image src="/svgs/home-icon.svg" alt="" width={30} height={0} />
             <h1>Beranda</h1>
           </div>
           <div
             className={`flex cursor-pointer items-center space-x-4 rounded-2xl px-4 py-2 hover:bg-Neutral400 ${showChildren ? 'bg-Neutral400' : 'bg-white'}`}
             onClick={() => setShowChildren(!showChildren)}
           >
-            <Image src="/svgs/situsIcon.svg" alt="" width={30} height={0} />
+            <Image src="/svgs/situs-icon.svg" alt="" width={30} height={0} />
             <h1>Situs</h1>
           </div>
           {showChildren && (
@@ -254,11 +269,16 @@ export default function Layout() {
             </>
           )}
           <div className="flex cursor-pointer items-center space-x-4 rounded-2xl px-4 py-2 hover:bg-Neutral400">
-            <Image src="/svgs/templatesIcon.svg" alt="" width={30} height={0} />
+            <Image
+              src="/svgs/templates-icon.svg"
+              alt=""
+              width={30}
+              height={0}
+            />
             <h1>Templates</h1>
           </div>
           <div className="flex cursor-pointer items-center space-x-4 rounded-2xl px-4 py-2 hover:bg-Neutral400">
-            <Image src="/svgs/paketIcon.svg" alt="" width={30} height={0} />
+            <Image src="/svgs/paket-icon.svg" alt="" width={30} height={0} />
             <h1>Paket Anda</h1>
           </div>
         </div>
